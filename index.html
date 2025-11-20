@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TopER: Topological Embeddings in Graph Representation Learning</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>TopER</h1>
+    <p><em>Topological Embeddings in Graph Representation Learning</em></p>
+    <p>Astrit Tola, Funmilola Mary Taiwo, Cuneyt Gurcan Akcora, Baris Coskunuzer</p>
+  </header>
+
+  <!-- ABSTRACT -->
+  <section id="abstract">
+    <h2>Abstract</h2>
+    <p>
+      Graph embeddings play a critical role in graph representation learning. 
+      TopER introduces a scalable topological framework that encodes graph structure efficiently. 
+      Using persistent topological features, it produces low-dimensional embeddings that preserve key structural properties, 
+      enabling state-of-the-art performance in graph classification and clustering tasks.
+    </p>
+  </section>
+
+  <!-- INTRODUCTION -->
+  <section id="introduction">
+    <h2>Introduction</h2>
+    <p>
+      Graphs are fundamental data structures modeling social networks, molecular structures, knowledge graphs, and more. 
+      Classical graph representation methods often overlook high-order topological patterns. 
+      TopER leverages persistent homology to capture the evolution of topological features across multiple filtration levels, 
+      creating embeddings that reflect the intrinsic graph structure.
+    </p>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section id="method">
+    <h2>Methodology</h2>
+    <p>
+      The core of TopER is TopoScan, a module that computes the evolution of graph substructures across filtrations. 
+      These sequences are fed into a transformer architecture, generating embeddings that are both expressive and efficient. 
+      TopER can be applied to various graph types, from molecular graphs to social networks.
+    </p>
+    <img src="images/toper_visualization.png" alt="TopER Visualization" />
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results">
+    <h2>Results</h2>
+    <p>
+      TopER achieves competitive performance on benchmark datasets including BZR, COX2, MUTAG, PROTEINS, and IMDB-B. 
+      The embeddings demonstrate robustness, scalability, and improved classification accuracy over traditional graph neural networks.
+    </p>
+    <img src="images/results_table.png" alt="Results Table" />
+  </section>
+
+  <!-- CODE AND RESOURCES -->
+  <section id="code">
+    <h2>Code & Resources</h2>
+    <p>
+      Python implementation and usage instructions are available on 
+      <a href="https://github.com/AstritTola/TopER" target="_blank">GitHub</a>. 
+      Figures and datasets can be found in the repository.
+    </p>
+  </section>
+
+  <!-- REFERENCES -->
+  <section id="references">
+    <h2>References</h2>
+    <ol>
+      <li>Astrit Tola et al., TopER: Topological Embeddings in Graph Representation Learning, NeurIPS 2025.</li>
+      <li>Edelsbrunner, H., Harer, J., Computational Topology: An Introduction. 2010.</li>
+      <li>Velickovic, P., et al., Graph Attention Networks, ICLR 2018.</li>
+    </ol>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Contact: <a href="mailto:atola@fsu.edu">atola@fsu.edu</a></p>
+    <p>&copy; 2025 Astrit Tola</p>
+  </footer>
+</body>
+</html>

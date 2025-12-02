@@ -124,6 +124,51 @@
     clustering, and visualization.
     </p>
 
+    <div class="section">
+    <h2>Preliminaries</h2>
+    <p>A graph \( G = (V, E) \) consists of nodes \( V \) and edges \( E \).</p>
+    <p>A <strong>filtration</strong> is a nested sequence of subgraphs:</p>
+    <p>\( G_1 \subseteq G_2 \subseteq \cdots \subseteq G_n = G \)</p>
+
+    <p>Filtrations are constructed using:</p>
+    <ul>
+      <li><strong>Node functions</strong> \( f: V \rightarrow \mathbb{R} \), such as degree, closeness, heat kernel signatures, or domain-specific attributes (e.g., atom types).</li>
+      <li><strong>Edge functions</strong> \( g: E \rightarrow \mathbb{R} \), such as weights or curvature measures.</li>
+    </ul>
+
+    <p>A <strong>sublevel filtration</strong> adds nodes or edges of increasing function value:</p>
+    <ul>
+      <li>\( V_i = \{v \in V \mid f(v) \leq \epsilon_i\} \)</li>
+      <li>\( E_i = \{(u,v) \in E \mid \max(f(u), f(v)) \leq \epsilon_i\} \)</li>
+    </ul>
+    <p>where \( \mathcal{T} = \{\epsilon_1, \ldots\} \).</p>
+
+    <img src="fig1.png" alt="Node and Edge Filtration Diagrams">
+  </div>
+
+  <div class="section">
+    <h2>TopER</h2>
+    <p><strong>TopER</strong> is a topology-inspired method for understanding graph evolution via filtration.</p>
+    <p>Motivations:</p>
+    <ul>
+      <li>Standard graph embeddings are high-dimensional and mainly for dataset-level visualization.</li>
+      <li>Low-dimensional graph-level embeddings are largely missing.</li>
+      <li>Persistent Homology is expressive but produces complex, hard-to-read outputs.</li>
+    </ul>
+
+    <img src="fig2.png" alt="TopER Scatter Plots for PROTEINS and BZR">
+    <p>Scatter plots show TopER visualizations for datasets:</p>
+    <ul>
+      <li>(a) PROTEINS</li>
+      <li>(b) BZR</li>
+    </ul>
+    <p>Each point represents an individual graph, distinguishing Class A and Class B.</p>
+  </div>
+
+
+
+    
+
 
     <h2>Overview</h2>
     <p>

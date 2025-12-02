@@ -163,6 +163,47 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     <img src="assets/fig2.png" alt="TopER Scatter Plots for PROTEINS and BZR">
   </div>
 
+    
+    <h1>TopER Pipeline</h1>
+
+    <div class="image-container">
+        <img src="datasets.png" alt="Datasets visualization" style="width:45%; margin-right:10px;">
+  </div>
+
+    <div class="diagram">
+        <img src="filtration-diagram.png" alt="Filtration and line fitting diagram" style="width:100  TopER summarizes the filtration using two <strong>simple components</strong> derived from regression:
+        <em>filtration sequences</em> and <em>evolution parameters</em>.
+    </p>
+
+    <h2>Filtration Sequences</h2>
+    <p>
+        Given a graph <span class="math">G = (V, E)</span>, we first construct a nested sequence of subgraphs:
+        <span class="math">G₁ ⊆ G₂ ⊆ ... ⊆ Gₙ = G</span>
+        using a chosen filtration function, such as degree, closeness, or an edge-based function.
+        For each filtration graph <span class="math">Gᵢ</span>, we record:
+    </p>
+    <ul>
+        <li><span class="math">xᵢ = |V|</span>: number of nodes</li>
+        <li><span class="math">yᵢ = |E|</span>: number of edges</li>
+    </ul>
+    <p>
+        This yields two monotone sequences <span class="math">x = {x₁, x₂, ..., xₙ}</span> and
+        <span class="math">y = {y₁, y₂, ..., yₙ}</span>, which describe how the graph grows across filtration thresholds
+        <span class="math">t = {t₁, t₂, ...}</span>.
+    </p>
+
+    <h2>Evolution via Line Fitting</h2>
+    <p>
+        In traditional PH, the next step would compute topological features for each <span class="math">Gᵢ</span> and vectorize persistence.
+        TopER instead examines how nodes and edges accumulate relative to nodes across the filtration.
+    </p>
+    <p>We fit a line to the filtration pairs <span class="math">{(xᵢ, yᵢ)} ∈ ℝ²</span> using simple linear regression:</p>
+    <p class="math">L(x) = a + b·x</p>
+    <p>The regression minimizes the squared error:</p>
+    <p class="math">E = Σᵢ (L(xᵢ) - yᵢ)²</p>
+    <p>resulting in coefficients <span class="math">(a, b)</span> that summarize the graph’s structural evolution.</p>
+
+
 
 
     
